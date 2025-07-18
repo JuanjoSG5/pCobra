@@ -1,12 +1,13 @@
 from types import SimpleNamespace, ModuleType
+from RestrictedPython import compile_restricted, safe_builtins
 from unittest.mock import patch
 import sys
 
 # Crear un módulo falso para evitar que la importación de sandbox
 # requiera RestrictedPython durante las pruebas.
 fake_rp = ModuleType("RestrictedPython")
-fake_rp.compile_restricted = lambda *a, **k: None
-fake_rp.safe_builtins = {}
+fake_rp.compile_restricted = compile_restricted
+fake_rp.safe_builtins = safe_builtins.copy()
 sys.modules.setdefault("RestrictedPython", fake_rp)
 eval_mod = ModuleType("Eval")
 eval_mod.default_guarded_getitem = lambda seq, key: seq[key]
