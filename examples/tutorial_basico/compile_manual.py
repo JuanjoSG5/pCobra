@@ -3,7 +3,7 @@ from cobra.parser.parser import Parser
 from cobra.transpilers.transpiler.to_python import TranspiladorPython
 from core.ast_nodes import NodoValor, NodoImprimir
 
-codigo = open('examples/tutorial_basico/hola_mundo.co').read()
+codigo = open('hola_mundo.co').read()
 lex = Lexer(codigo)
 tokens = lex.analizar_token()
 ast = Parser(tokens).parsear()
