@@ -1,5 +1,3 @@
-import sys
-import backend
 from cobra.lexico.lexer import Lexer
 from cobra.parser.parser import Parser
 from cobra.transpilers.transpiler.to_python import TranspiladorPython
