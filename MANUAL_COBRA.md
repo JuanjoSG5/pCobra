@@ -8,15 +8,16 @@ Este manual presenta en español los conceptos básicos para programar en Cobra.
 
 1. Clona el repositorio y entra en el directorio `pCobra`.
 2. Crea y activa un entorno virtual (conda).
-3. Haz un `conda install pip`
-4. Instala las dependencias con `pip install -r requirements.txt`.
+3. Instala la version 3.12 de Python. 
+4. Haz un `conda install pip`
+5. Instala las dependencias con `pip install -r requirements.txt`.
    Asegúrate también de tener disponible la herramienta `cbindgen`:
 
    ```bash
    sudo apt install cargo;
    cargo install cbindgen;
    ```
-5. Instala la herramienta de forma editable con `pip install -e .`.
+6. Instala la herramienta de forma editable con `pip install -e .`.
 
 ### Instalación con pipx
 
